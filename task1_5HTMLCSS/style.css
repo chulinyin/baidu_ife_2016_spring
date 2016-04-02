@@ -5,7 +5,6 @@
 a{
 	text-indent: 0em;
 	color: blue;
-
 }
 a ,span{
 	display: inline-block;
@@ -13,12 +12,35 @@ a ,span{
 body{
 	background-color: rgb(222,222,222);
 }
-.article,.side{
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+	height: 0;
+}
+.content{
 	margin: 30px 20px;
+}
+.side{
+	float:right;
+	width: 400px;
+}
+
+.main{
+	margin-right: 460px;
+}
+
+
+.article,.side{
 	padding: 40px 20px 20px 20px ;
 	box-shadow: 1px 1px 2px 1px #ccc;
 	background-color: white;
 }
+
+
 h2{
 	font: bold 20px/30px "Microsoft YaHei","serif";
 	color: black;
@@ -76,6 +98,7 @@ display: inline-block;
 
 /* 图片 */
 .article3 figure{
+	display: inline-block;
 	width: 310px;
 	margin-left: 30px;
 	margin-bottom: 20px;
@@ -95,6 +118,7 @@ display: inline-block;
 	text-indent: 0;
 }
 .article4 table{
+	width: 80%;
 	border: 1px solid #ddd;
 	border-spacing: 0;
 }
@@ -108,7 +132,7 @@ display: inline-block;
 }
 .article4 table td{
 	height: 20px;
-	width: 700px;
+	width: 40%;
 	padding-left: 5px;
 	border: 1px solid #ddd;
 	font: bold 12px/35px "Microsoft YaHei","serif";;
@@ -130,7 +154,7 @@ display: inline-block;
 	line-height: 40px;
 }
 .side form{
-margin-left: 20%;
+/*margin-left: 20%;*/
 }
 .side label{
 	float: left;
@@ -174,7 +198,7 @@ margin-left: 20%;
 	line-height: 20px;
 }
 .side textarea{
-	width: 70%;
+	width: 60%;
 }
 .side button{
 	width: 100%;
@@ -189,9 +213,9 @@ margin-left: 20%;
 /* 页脚 */
 .footer{
 	height: 80px;
-	padding-top: 30px;
-	text-align: center;	
+	padding-top: 40px;
 	background-color: black;
+	text-align: center;
 }
 .footer p{
 	color: white;

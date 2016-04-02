@@ -1,0 +1,36 @@
+	* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+	#outer {
+		width: 400px;
+		height: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: :-100px;
+		margin-left: -200px;
+		background-color: #ccc;	
+		overflow: hidden;
+	}
+
+	#inner-A {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		border-radius: 50px;
+		background-color: #fc0;
+		left: -50px;
+		top:-50px;
+	}
+
+	#inner-B {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		border-radius: 50px;
+		background-color: #fc0;
+		right: -50px;
+		bottom: -50px;
+	}

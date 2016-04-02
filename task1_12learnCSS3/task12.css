@@ -1,0 +1,84 @@
+*{
+	margin:0;
+	padding:0;
+}
+.ranking-table thead th{
+	background-color: #000000;
+	color: #fff;
+}
+
+.ranking-table tbody tr:nth-child(even){
+	background-color:#DCDCDC;
+	color:#000;
+}
+
+.ranking-table tbody tr:nth-child(-n+4){
+
+	color:#FF0000;
+}
+
+.focus-wider{
+	margin-top:20px;
+	margin-bottom: 20px;
+	width: 100px;
+	transition: 1s width;
+	-moz-transition: 1s width;
+	-webkit-transition: 1s width;
+	-o-transition: 1s width;
+}
+
+.focus-wider:focus{
+	width: 200px;	
+}
+
+a {
+
+	display: inline-block;
+	padding:5px;
+	text-decoration: none;
+	width:20px;
+	height:20px;
+	background: #fff;
+	opacity: 50%;
+}
+
+.banner-controller {
+	position: absolute;
+	bottom:10px;
+	right:10px;
+	overflow: hidden;
+}
+
+.banner{
+	position: absolute;
+	width:500px;
+	height: 300px;
+	border: 1px solid;
+}
+
+.banner1{
+	background-color: #FFFF00;
+}
+
+.banner2{
+	background-color: #ADFF2F;
+}
+
+.banner3{
+	background-color: #00FFFF;
+}
+
+.banner span:target {
+  animation: scroll .5s linear;
+  z-index: 999;
+}
+
+@keyframes scoller {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
