@@ -26,8 +26,9 @@
   </ul>
 
   <button id="sort-btn">排序</button>
-
+<script src="numToChinese.js" type="text/javascript" ></script>
 <script type="text/javascript">
+
 
 /**
  * getData方法
@@ -61,8 +62,9 @@ function getData() {
  */
 function sortAqiData(data) {
   data.sort(function(value1,value2){
-     return value1[1] - value2[1];
-  })
+     return value2[1] - value1[1];
+  });
+  return data;
 }
 
 /**
@@ -70,18 +72,20 @@ function sortAqiData(data) {
  * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
  * 格式见ul中的注释的部分
  */
- <!-- 
-    <li>第一名：北京空气质量：<b>90</b></li>
+
+/*  <li>第一名：北京空气质量：<b>90</b></li>
     <li>第二名：北京空气质量：<b>90</b></li>
-    <li>第三名：北京空气质量：<b>90</b></li>
-     -->
+    <li>第三名：北京空气质量：<b>90</b></li>*/
+    
 function render(data) {
   var resortNode = document.getElementById("resort");
+  var html = '';
   for(var i=0;i<data.length;i++){
-    var child = document.createElement("li");
-    
-    child.innerHTML = '第'
+    html += '<li>第'+ numtoCL.toS(i+1) + '名：'; 
+    html +=  data[i][0] + '空气质量：';
+    html +=  '<b>' + data[i][1] + '</b></li>';
   }
+  resortNode.innerHTML = html;
 }
 
 function btnHandle() {
@@ -94,6 +98,8 @@ function btnHandle() {
 function init() {
 
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+  var btnNode = document.getElementById("sort-btn");
+  btnNode.addEventListener("click",btnHandle,false);
 
 }
 
