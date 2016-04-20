@@ -66,10 +66,12 @@ function addBtnHandle() {
  */
 function delBtnHandle(event) {
   // do sth.
+  if (confirm("你确定要删除该行吗")){
   var tr = event.target.parentElement.parentElement; //获取单击按钮对应的行
   var cityName = tr.firstElementChild.innerHTML;
   delete aqiData[cityName];
   renderAqiList();
+  }
   
 }
 
